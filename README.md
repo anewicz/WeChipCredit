@@ -8,6 +8,8 @@
 	Expandir Solução WeChipCredit > Clicar com botão direito em Api_WebApplication > Definir como Projeto de inicialização > Depurar IIS EXPRESS 
 	...api/Offers o retorno de todas as ofertas cadastradas.
 	...api/Offers?name=da o retorno de todas as ofertas cadastradas com parte ou nome completo inserido após o "=".
+	
+Ex: https://localhost:44338/api/Offers?name=da
 
 # Testar Software: 
 	Expandir Solução WeChipCredit > Clicar com botão direito em WeChipCredit > Definir como Projeto de inicialização > Depurar
