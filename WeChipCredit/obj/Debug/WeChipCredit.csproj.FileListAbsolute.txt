@@ -1,0 +1,136 @@
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\obj\Debug\WeChipCredit.csprojAssemblyReference.cache
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\obj\Debug\MainWindow.g.cs
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\obj\Debug\App.g.cs
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\obj\Debug\WeChipCredit_MarkupCompile.cache
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\obj\Debug\WeChipCredit_MarkupCompile.lref
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\WeChipCredit.exe.config
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\WeChipCredit.exe
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\WeChipCredit.pdb
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\Microsoft.EntityFrameworkCore.dll
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\Microsoft.Extensions.Configuration.dll
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\Microsoft.Extensions.Logging.dll
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\Remotion.Linq.dll
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\System.Buffers.dll
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\System.Collections.Immutable.dll
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\System.Interactive.Async.dll
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\System.Memory.dll
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\Microsoft.EntityFrameworkCore.xml
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.xml
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\Microsoft.EntityFrameworkCore.Design.xml
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\Microsoft.EntityFrameworkCore.Relational.xml
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\Microsoft.EntityFrameworkCore.SqlServer.xml
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\Microsoft.Extensions.Caching.Abstractions.xml
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\Microsoft.Extensions.Caching.Memory.xml
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\Microsoft.Extensions.Configuration.xml
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\Microsoft.Extensions.Logging.xml
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\Remotion.Linq.xml
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\System.Buffers.xml
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\System.Collections.Immutable.xml
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\System.Interactive.Async.xml
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\System.Memory.xml
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\obj\Debug\MainWindow.baml
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\obj\Debug\WeChipCredit.g.resources
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\obj\Debug\WeChipCredit.Properties.Resources.resources
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\obj\Debug\WeChipCredit.csproj.GenerateResource.cache
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\obj\Debug\WeChipCredit.csproj.CoreCompileInputs.cache
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\obj\Debug\WeChipCredit.csproj.CopyComplete
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\obj\Debug\WeChipCredit.exe
+C:\Users\Gustavo\Desktop\Dayane Michalewicz Rodrigues - WeChipCredit\WeChipCredit\obj\Debug\WeChipCredit.pdb
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\WeChipCredit.exe.config
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\WeChipCredit.exe
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\WeChipCredit.pdb
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\Microsoft.EntityFrameworkCore.Design.dll
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\Microsoft.EntityFrameworkCore.dll
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\Microsoft.EntityFrameworkCore.Relational.dll
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\Microsoft.Extensions.Configuration.Binder.dll
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\Microsoft.Extensions.Configuration.dll
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\Microsoft.Extensions.Logging.dll
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\Microsoft.Extensions.Options.dll
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\Microsoft.Extensions.Primitives.dll
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\Remotion.Linq.dll
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\System.Buffers.dll
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\System.Collections.Immutable.dll
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\System.ComponentModel.Annotations.dll
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\System.Data.SqlClient.dll
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\System.Interactive.Async.dll
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\System.Memory.dll
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\System.Numerics.Vectors.dll
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\Microsoft.EntityFrameworkCore.xml
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.xml
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\Microsoft.EntityFrameworkCore.Design.xml
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\Microsoft.EntityFrameworkCore.Relational.xml
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\Microsoft.EntityFrameworkCore.SqlServer.xml
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\Microsoft.Extensions.Caching.Abstractions.xml
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\Microsoft.Extensions.Caching.Memory.xml
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\Microsoft.Extensions.Configuration.xml
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\Microsoft.Extensions.Logging.xml
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\Microsoft.Extensions.Options.xml
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\Microsoft.Extensions.Primitives.xml
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\Remotion.Linq.xml
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\System.Buffers.xml
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\System.Collections.Immutable.xml
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\System.Interactive.Async.xml
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\System.Memory.xml
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\System.Numerics.Vectors.xml
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\obj\Debug\MainWindow.g.cs
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\obj\Debug\App.g.cs
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\obj\Debug\WeChipCredit_MarkupCompile.cache
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\obj\Debug\WeChipCredit_MarkupCompile.lref
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\obj\Debug\MainWindow.baml
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\obj\Debug\WeChipCredit.g.resources
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\obj\Debug\WeChipCredit.Properties.Resources.resources
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\obj\Debug\WeChipCredit.csproj.GenerateResource.cache
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\obj\Debug\WeChipCredit.csproj.CoreCompileInputs.cache
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\obj\Debug\WeChipCredit.csproj.CopyComplete
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\obj\Debug\WeChipCredit.exe
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\obj\Debug\WeChipCredit.pdb
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\WeChipCredit.exe.manifest
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\bin\Debug\WeChipCredit.application
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\obj\Debug\WeChipCredit.exe.manifest
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\obj\Debug\WeChipCredit.application
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\obj\Debug\WeChipCredit.csprojAssemblyReference.cache
