@@ -63,7 +63,7 @@ namespace WeChipCredit
             {
                 ComboBoxItem cbItem = new ComboBoxItem();
                 cbItem.Content = $" CÓD: {item.CodProduct.ToString("0000")} | R$ {item.VlPrice.ToString("0.00")} - {item.NmProduct}";
-                cbItem.Tag = item.Id;
+                cbItem.Tag = item.IdProduct;
                 SearchProducts.Items.Add(cbItem);
             }
         }
@@ -88,7 +88,7 @@ namespace WeChipCredit
                 {
                     ComboBoxItem cbItem = new ComboBoxItem();
                     cbItem.Content = $"{item.CodStatus.ToString("0000")} - {item.NmStatus}";
-                    cbItem.Tag = item.Id;
+                    cbItem.Tag = item.IdStatus;
                     SearchStatus.Items.Add(cbItem);
 
                 }
@@ -120,26 +120,26 @@ namespace WeChipCredit
 
                 if (client != null)
                 {
-                    var clientId = (client.Id).ToString();
+                    var clientId = (client.IdClient).ToString();
                     int clientId2 = int.Parse(clientId);
 
                     if (DeleteCheck.IsChecked == true)
                     {
-                        var findClient = _Clients.Where(w => w.Id == clientId2).FirstOrDefault();
-                        CliId.Text = client.Id.ToString();
+                        var findClient = _Clients.Where(w => w.IdClient == clientId2).FirstOrDefault();
+                        CliId.Text = client.IdClient.ToString();
                     }
                     else
                     {
-                        var finder = _Clients.Where(w => w.Id == clientId2).FirstOrDefault();
+                        var finder = _Clients.Where(w => w.IdClient == clientId2).FirstOrDefault();
 
                         CliName.Text = finder.Name;
                         CliCpf.Text = finder.Cpf.ToString();
                         CliCredit.Text = finder.VlCredit.ToString();
                         CliDdd.Text = finder.Ddd.ToString();
                         CliPhone.Text = finder.Phone.ToString();
-                        CliId.Text = client.Id.ToString();
+                        CliId.Text = client.IdClient.ToString();
 
-                        sttId.Text = finder._Status.Id.ToString();
+                        sttId.Text = finder._Status.IdStatus.ToString();
                         sttCode.Text = finder._Status.CodStatus.ToString();
                         sttName.Text = finder._Status.NmStatus.ToString();
 
@@ -187,11 +187,11 @@ namespace WeChipCredit
                     var ClienVlCredit = string.IsNullOrEmpty(CliCredit.Text) ? 0 : float.Parse(CliCredit.Text.Replace(".", ","));
 
 
-                    var status = _Status.Where(w => w.Id == 1).FirstOrDefault();
+                    var status = _Status.Where(w => w.IdStatus == 1).FirstOrDefault();
 
                     Client client = new Client();
                     {
-                        client.Id = _Clients.Count() + 1;
+                        client.IdClient = _Clients.Count() + 1;
                         client.Name = ClienName;
                         client.Cpf = CPF;
                         client.Ddd = ClienDdd;
@@ -238,7 +238,7 @@ namespace WeChipCredit
                 else
                 {
                     var clientId = int.Parse(CliId.Text);
-                    var clientID = _Clients.Where(w => w.Id == clientId).FirstOrDefault();
+                    var clientID = _Clients.Where(w => w.IdClient == clientId).FirstOrDefault();
 
                     if (MessageBox.Show($@"Deseja mesmo Alterar {clientID.Name.ToUpper()}?", "Confirmação", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                     {
@@ -268,7 +268,7 @@ namespace WeChipCredit
             {
                 var clientId = int.Parse(CliId.Text);
 
-                var findClient = _Clients.Where(w => w.Id == clientId).FirstOrDefault();
+                var findClient = _Clients.Where(w => w.IdClient == clientId).FirstOrDefault();
                 var clientNm = findClient.Name;
 
 
@@ -392,7 +392,7 @@ namespace WeChipCredit
                     if (msg == "")
                     {
                         var clientId = (int)((ComboBoxItem)SearchClients.SelectedItem).Tag;
-                        var selClient = _Clients.Where(w => w.Id == clientId).FirstOrDefault();
+                        var selClient = _Clients.Where(w => w.IdClient == clientId).FirstOrDefault();
 
                         if (DDD.Length != 2)
                             AtentionBox("DDD Inválido - Deve Conter 2 Digitos Numericos", 2);
@@ -403,9 +403,9 @@ namespace WeChipCredit
                         else
                         {
                             var sttId = (int)((ComboBoxItem)SearchStatus.SelectedItem).Tag;
-                            var selStatus = _Status.Where(w => w.Id == sttId).FirstOrDefault();
+                            var selStatus = _Status.Where(w => w.IdStatus == sttId).FirstOrDefault();
 
-                            var offerClient = _Offers.Where(w => w._Client.Id == clientId).FirstOrDefault();
+                            var offerClient = _Offers.Where(w => w._Client.IdClient == clientId).FirstOrDefault();
 
                             if (selStatus.IsSale == true && offerClient._Products.Count == 0)
                                 MessageBox.Show($"Adicione um produto para venda!");
@@ -454,12 +454,12 @@ namespace WeChipCredit
             try
             {
                 var clientId = (int)((ComboBoxItem)SearchClients.SelectedItem).Tag;
-                var cInfo = _Clients.Where(w => w.Id == clientId).FirstOrDefault();
+                var cInfo = _Clients.Where(w => w.IdClient == clientId).FirstOrDefault();
 
                 var productId = (int)((ComboBoxItem)SearchProducts.SelectedItem).Tag;
-                var _auxProd = _Products.Where(w => w.Id == productId).FirstOrDefault();
+                var _auxProd = _Products.Where(w => w.IdProduct == productId).FirstOrDefault();
 
-                var offerClient = _Offers.Where(w => w._Client.Id == clientId).FirstOrDefault();
+                var offerClient = _Offers.Where(w => w._Client.IdClient == clientId).FirstOrDefault();
 
                 _OfferProducts.Add(_auxProd);
                 offerClient._Products.Add(_auxProd);
@@ -479,11 +479,11 @@ namespace WeChipCredit
             {
 
                 var clientId = (int)((ComboBoxItem)SearchClients.SelectedItem).Tag;
-                var cInfo = _Clients.Where(w => w.Id == clientId).FirstOrDefault();
+                var cInfo = _Clients.Where(w => w.IdClient == clientId).FirstOrDefault();
 
                 var product = (Product)OffersProductsList.SelectedItems[0];
 
-                var offerClient = _Offers.Where(w => w._Client.Id == clientId).FirstOrDefault();
+                var offerClient = _Offers.Where(w => w._Client.IdClient == clientId).FirstOrDefault();
 
                 _OfferProducts.Remove(product);
                 offerClient._Products.Remove(product);
@@ -517,7 +517,7 @@ namespace WeChipCredit
             var product = (Product)item.SelectedItem;
             if (product != null)
             {
-                var idProduct = int.Parse(product.Id.ToString());
+                var idProduct = int.Parse(product.IdProduct.ToString());
             }
         }
 
@@ -528,7 +528,7 @@ namespace WeChipCredit
             SaldoRestante.Document.Blocks.Clear();
             CollapsedStacksInMain();
             SearchClients.Items.Clear();
-            _OfferProducts.RemoveAll(w => w.Id > 0);
+            _OfferProducts.RemoveAll(w => w.IdProduct > 0);
             PopulateOfferProductsData();
             Offer.Visibility = Visibility.Visible;
 
@@ -549,7 +549,7 @@ namespace WeChipCredit
                     {
                         ComboBoxItem item = new ComboBoxItem();
                         item.Content = $" CPF: {s.Cpf} | NOME: {s.Name}";
-                        item.Tag = s.Id;
+                        item.Tag = s.IdClient;
                         SearchClients.Items.Add(item);
                     }
 
@@ -582,14 +582,14 @@ namespace WeChipCredit
             if (SearchClients.SelectedItem != null)
             {
                 var clientId = (int)((ComboBoxItem)SearchClients.SelectedItem).Tag;
-                var selClient = _Clients.Where(w => w.Id == clientId).FirstOrDefault();
+                var selClient = _Clients.Where(w => w.IdClient == clientId).FirstOrDefault();
 
                 PopulateProductData();
                 conteudo.Document.Blocks.Clear();
 
                 Paragraph paragraph = new Paragraph();
                 paragraph.Inlines.Add(new Bold(new Run("CÓD CLIENTE: ")));
-                paragraph.Inlines.Add(new Run($"{selClient.Id:0000}" + Environment.NewLine));
+                paragraph.Inlines.Add(new Run($"{selClient.IdClient:0000}" + Environment.NewLine));
                 paragraph.Inlines.Add(new Bold(new Run("CRÉDITO: ")));
                 paragraph.Inlines.Add(new Run($" R${selClient.VlCredit:0.00}" + Environment.NewLine));
                 paragraph.Inlines.Add(new Bold(new Run("STATUS ATUAL: ")));
@@ -598,7 +598,7 @@ namespace WeChipCredit
 
                 Offer offer = new Offer();
                 {
-                    offer.Id = _Offers.Count() + 1;
+                    offer.IdOffer = _Offers.Count() + 1;
                     offer._Client = selClient;
                     offer.TotalOffer = 0;
                     offer._Products = new List<Product>();

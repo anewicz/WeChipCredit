@@ -414,14 +414,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WeChipCredit.exe" size="53224">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WeChipCredit.exe" size="54760">
       <assemblyIdentity name="WeChipCredit" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>UpFdvch8LJRZnaiw9yG6STrFZ+hlHJ8TyViPvV+7OtY=</dsig:DigestValue>
+        <dsig:DigestValue>DPXS+pHDxy5S7iWva3NOvpEzXk+JyFVEylvPOudM08k=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

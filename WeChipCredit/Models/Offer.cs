@@ -4,7 +4,7 @@ namespace WeChipCredit.Models
 {
     public class Offer
     {
-        public int Id { get; set; }
+        public int IdOffer { get; set; }
         public Client _Client { get; set; }
         public List<Product> _Products { get; set; }
 

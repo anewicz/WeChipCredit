@@ -5,7 +5,7 @@ namespace WeChipCredit.Models
 {
     public class Client
     {
-        public int Id { get; set; }
+        public int IdClient { get; set; }
         public string Name { get; set; }
         public string Cpf { get; set; }
         public sbyte Ddd { get; set; }
@@ -18,13 +18,13 @@ namespace WeChipCredit.Models
         //    set { _status = Status.GetStatus().Where(w => w.Id == IdStatus).FirstOrDefault(); }
         //}
 
-        public DeliveryAddress Address { get; set; }
+        public DeliveryAddress _Address { get; set; }
 
         public Status _Status { get; set; }
 
         public Client(int id, string name, string cpf, sbyte ddd, int phone, float vlCredit, Status _status)
         {
-            Id = id;
+            IdClient = id;
             Name = name.ToUpper();
             Cpf = cpf;
             Ddd = ddd;
@@ -41,7 +41,7 @@ namespace WeChipCredit.Models
         public static List<Client> GetFakeClients()
         {
             List<Status> _Status = Status.GetStatus();
-            var status = _Status.Where(w => w.Id == 1).FirstOrDefault();
+            var status = _Status.Where(w => w.IdStatus == 1).FirstOrDefault();
 
             List<Client> FakeClientList = new List<Client>
             {

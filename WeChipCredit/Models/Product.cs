@@ -4,7 +4,7 @@ namespace WeChipCredit.Models
 {
     public class Product
     {
-        public int Id { get; set; }
+        public int IdProduct { get; set; }
         public string NmProduct { get; set; }
         public float VlPrice { get; set; }
         public string TpProduct { get; set; }
@@ -13,7 +13,7 @@ namespace WeChipCredit.Models
 
         public Product(int id, string nmProduct, float vlPrice, string tpProduct, int codProduct)
         {
-            Id = id;
+            IdProduct = id;
             NmProduct = nmProduct;
             VlPrice = vlPrice;
             TpProduct = tpProduct;

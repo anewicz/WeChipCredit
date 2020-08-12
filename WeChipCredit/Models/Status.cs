@@ -4,7 +4,7 @@ namespace WeChipCredit.Models
 {
     public class Status
     {
-        public int Id { get; set; }
+        public int IdStatus { get; set; }
         public string NmStatus { get; set; }
         public bool IsFinalizingClient { get; set; }
         public bool IsSale { get; set; }
@@ -12,7 +12,7 @@ namespace WeChipCredit.Models
 
         public Status(int id, string nmStatus, bool isFinalizingClient, bool isSale, int codStatus)
         {
-            Id = id;
+            IdStatus = id;
             NmStatus = nmStatus;
             IsFinalizingClient = isFinalizingClient;
             IsSale = isSale;
