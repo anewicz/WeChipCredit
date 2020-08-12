@@ -40,7 +40,7 @@ namespace WeChipCredit.Models
         {
             List<Status> _Status = Status.GetStatus();
             var status = _Status.Where(w => w.Id == 1).FirstOrDefault();
-            
+
             List<Client> FakeClientList = new List<Client>
             {
                 new Client(1, "Dayane Michalewicz", "40271589892", 48, 988421246, float.Parse("44,50"), status),

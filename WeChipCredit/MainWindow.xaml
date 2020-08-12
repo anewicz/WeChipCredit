@@ -172,7 +172,7 @@
                         </RichTextBox>
 
                         <Label   Content="Selecione o Produto:" FontSize="11" Foreground="#FF838383" VerticalAlignment="center" HorizontalAlignment="center"/>
-                        <ComboBox Name="SearchProducts"  Margin="5" Width="500" FontSize="11" BorderBrush="#FFB6B6B6"  SelectionChanged="SearchProducts_SelectionChanged" />
+                        <ComboBox Name="SearchProducts"  Margin="5" Width="500" FontSize="11" BorderBrush="#FFB6B6B6" />
 
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
                             <Button  Name="ButtonProductAdd" Margin="-5" Content="INCLUIR"  Height="25" Width="200"  FontSize="11" Click="Button_ProductAdd" />
@@ -181,7 +181,7 @@
 
                         <StackPanel Name="ListOffer" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,0,0" HorizontalAlignment="Center" >
                             <Label   x:Name="ListOfferL"   Content="PRODUTOS OFERTADOS"  Margin="5,0,0,0" FontSize="11" Foreground="#FF838383" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" />
-                            <ListView x:Name="OffersProductsList" Height="150" Width="500" HorizontalAlignment="Left" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Visible" Foreground="#FF3D3D3D" BorderBrush="#FFD6D6D6" Background="#FFFCFCFC" PreviewMouseLeftButtonUp="OffersProductsList_PreviewMouseLeftButtonUp" >
+                            <ListView x:Name="OffersProductsList" Height="150" Width="500" HorizontalAlignment="Left" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Visible" Foreground="#FF3D3D3D" BorderBrush="#FFD6D6D6" Background="#FFFCFCFC"  >
                                 <ListView.View>
                                     <GridView>
                                         <GridViewColumn Header = "Id" DisplayMemberBinding="{Binding Path=Id, StringFormat=0000 }" Width="auto"/>
@@ -193,7 +193,7 @@
                             </ListView>
                         </StackPanel>
 
-<Label   Content="Selecione o Status:" FontSize="11" Foreground="#FF838383" VerticalAlignment="center" HorizontalAlignment="center"/>
+                        <Label   Content="Selecione o Status:" FontSize="11" Foreground="#FF838383" VerticalAlignment="center" HorizontalAlignment="center"/>
                         <ComboBox Name="SearchStatus"    Margin="5" Width="500" FontSize="11" BorderBrush="#FFB6B6B6" SelectionChanged="SearchStatus_SelectionChanged" />
 
                         <StackPanel  Name="ButtonStOfertar" Margin="-70,0,0,0" Orientation="Vertical">

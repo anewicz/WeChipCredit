@@ -40,6 +40,6 @@ namespace WeChipCredit.Models
             };
             return ProductsList;
         }
-    } 
+    }
 
 }
