@@ -130,7 +130,7 @@
                                 <GridViewColumn Header = "CPF" DisplayMemberBinding="{Binding Path=Cpf, StringFormat=00000000000}" Width="auto"/>
                                 <GridViewColumn Header = "Credito" DisplayMemberBinding="{Binding Path=VlCredit, StringFormat=0.00}" Width="auto"/>
                                 <GridViewColumn Header = "DDD" DisplayMemberBinding="{Binding  Path=Ddd, StringFormat=(00)}" Width="auto"/>
-                                <GridViewColumn Header = "Telefone" DisplayMemberBinding="{Binding Path=Phone, StringFormat=0 0000-0000}" Width="auto"/>
+                                <GridViewColumn Header = "Telefone" DisplayMemberBinding="{Binding Path=Phone, StringFormat=0000-0000}" Width="auto"/>
                                 <GridViewColumn Header = "Status" DisplayMemberBinding="{Binding _Status.NmStatus}" Width="auto"/>
                             </GridView>
                         </ListView.View>
@@ -175,8 +175,15 @@
                         <ComboBox Name="SearchProducts"  Margin="5" Width="500" FontSize="11" BorderBrush="#FFB6B6B6" />
 
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <Button  Name="ButtonProductAdd" Margin="-5" Content="INCLUIR"  Height="25" Width="200"  FontSize="11" Click="Button_ProductAdd" />
-                            <Button  Name="ButtonProductRemove" Margin="5" Content="DELETAR"  Height="25" Width="200"  FontSize="11" Click="Button_ProductRemove" />
+                            <RichTextBox Name="SaldoRestante" Margin="-9,0,5,0" Padding="5" Height="25" Width="250" BorderBrush="LightGray" Background="Wheat" IsEnabled="False">
+                                <FlowDocument>
+                                    <Paragraph>
+                                    </Paragraph>
+                                </FlowDocument>
+                            </RichTextBox>
+                            
+                            <Button  Name="ButtonProductAdd" Margin="5" Content="INCLUIR"  Height="25" Width="110"  FontSize="11" Click="Button_ProductAdd" />
+                            <Button  Name="ButtonProductRemove" Margin="5" Content="DELETAR"  Height="25" Width="110"  FontSize="11" Click="Button_ProductRemove" />
                         </StackPanel>
 
                         <StackPanel Name="ListOffer" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,0,0" HorizontalAlignment="Center" >
@@ -194,7 +201,7 @@
                         </StackPanel>
 
                         <Label   Content="Selecione o Status:" FontSize="11" Foreground="#FF838383" VerticalAlignment="center" HorizontalAlignment="center"/>
-                        <ComboBox Name="SearchStatus"    Margin="5" Width="500" FontSize="11" BorderBrush="#FFB6B6B6" SelectionChanged="SearchStatus_SelectionChanged" />
+                        <ComboBox Name="SearchStatus"    Margin="5" Width="500" FontSize="11" BorderBrush="#FFB6B6B6" />
 
                         <StackPanel  Name="ButtonStOfertar" Margin="-70,0,0,0" Orientation="Vertical">
                             <Label   Name="ButtonOfertarL"  Width="120" Content="" FontSize="11" Foreground="#FF838383" HorizontalAlignment="center"/>

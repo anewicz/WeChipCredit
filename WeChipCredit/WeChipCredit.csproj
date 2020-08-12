@@ -193,6 +193,7 @@
     <Compile Include="DAO\FakeOffers.cs" />
     <Compile Include="Models\CPFValidate.cs" />
     <Compile Include="Models\Offer.cs" />
+    <Compile Include="Models\DeliveryAddress.cs" />
     <Compile Include="Models\Status.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Client.cs" />

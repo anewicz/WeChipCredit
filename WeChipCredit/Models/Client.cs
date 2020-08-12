@@ -18,6 +18,8 @@ namespace WeChipCredit.Models
         //    set { _status = Status.GetStatus().Where(w => w.Id == IdStatus).FirstOrDefault(); }
         //}
 
+        public DeliveryAddress Address { get; set; }
+
         public Status _Status { get; set; }
 
         public Client(int id, string name, string cpf, sbyte ddd, int phone, float vlCredit, Status _status)
