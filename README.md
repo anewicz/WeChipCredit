@@ -1,7 +1,7 @@
 # WeChipCredit
 
-* Adicionada Base clientes e Ofertas Inicial para realização dos testes/ Sistema sobe com alguns clientes iniciais. 
-* Api e Forms estão em mesma solução.
+* Adicionada Base Clientes e Ofertas inicial para realização dos testes de Api e do Sistema.
+* Api e Software estão na mesma solução.
 * Passos abaixo para Testes de cada um Isoladamente.
 
 # Testar Api: 
@@ -16,6 +16,6 @@ Ex: https://localhost:44338/api/Offers?name=da
 	Expandir Solução WeChipCredit > Clicar com botão direito em WeChipCredit > Definir como Projeto de inicialização > Depurar
 	
 # Sobre Base de Clientes e Ofertas Fakes para facilitar os testes. 
-	Devido o sistema não efetuar consulta ao banco de dados para atualização da lista de ofertas não é possivel acompanhar as propostas novas cadastradas na API. O sistema é completamente funcional e pode-se adicionar mais clientes, deletar e efetuar os demais processos escopados... A base adicionada não interfere em nenhum ponto de funcionamento, e é utilizada somente para facilitar os testes principalemnte de API, pois o mesmo não possui CRUD com nenhum BD então ele não retornaria resultados para testes.
+	Devido o sistema não efetuar consulta ao banco de dados para resgate e armazenamento das informações trafegadas dentro do software e não dser possível acompanhar as propostas registradas anteriormente a mesma foi adicionada para facilitar os testes.  A base adicionada não interfere em nenhum ponto de funcionamento, e é utilizada somente com esse fim principalmente para teste da API.
 	
 	
