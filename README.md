@@ -6,8 +6,9 @@
 
 # Testar Api: 
 	Expandir Solução WeChipCredit > Clicar com botão direito em Api_WebApplication > Definir como Projeto de inicialização > Depurar IIS EXPRESS 
-	...api/Offers o retorno de todas as ofertas cadastradas.
-	...api/Offers?name=da o retorno de todas as ofertas cadastradas com parte ou nome completo inserido após o "=".
+	GET: /api/Offers  O retorno de todas as ofertas cadastradas.
+	GET: /api/Offers?name=da  Retorna ofertas com parte ou nome completo inserido.
+	GET: /api/Offers?cpf=402  Retorna ofertas com parte ou todo o CPF, Recebe somente numeros.
 	
 Ex: https://localhost:44338/api/Offers?name=da
 
