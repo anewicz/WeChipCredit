@@ -169,7 +169,12 @@ namespace WeChipCredit
                 var DDD = string.Join("", CliDdd.Text.ToCharArray().Where(Char.IsDigit));
                 var Fone = string.Join("", CliPhone.Text.ToCharArray().Where(Char.IsDigit));
 
-                if (!CPFValidate.ValidationCPF(CPF))
+                float creditoParse;
+
+                var result = float.TryParse(CliCredit.Text.Replace(".", ","), out creditoParse);
+                if (!result)
+                    AtentionBox("Credito precisa ser inserido no formato correto, somente numeração. Ex: 0,00", 2);
+                else if (!CPFValidate.ValidationCPF(CPF))
                     AtentionBox("Digite um CPF Válido com 11 Digitos Numericos", 2);
                 else if (DDD.Length != 2)
                     AtentionBox("DDD Inválido - Deve Conter 2 Digitos Numericos", 2);
@@ -177,11 +182,13 @@ namespace WeChipCredit
                     AtentionBox("Telefone Inválido - Telefone deve conter entre 8 e 9 Digitos Numericos", 2);
                 else
                 {
+ 
+
                     var ClienName = CliName.Text.ToUpper();
                     var ClienCpf = long.Parse(CPF);
                     var ClienDdd = sbyte.Parse(DDD);
                     var ClienPhone = int.Parse(Fone);
-                    var ClienVlCredit = string.IsNullOrEmpty(CliCredit.Text) ? 0 : float.Parse(CliCredit.Text.Replace(".", ","));
+                    var ClienVlCredit = string.IsNullOrEmpty(CliCredit.Text) ? 0 : creditoParse;
 
                     var status = _Status.Where(w => w.IdStatus == 1).FirstOrDefault();
 
