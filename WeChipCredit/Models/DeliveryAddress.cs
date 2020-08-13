@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace WeChipCredit.Models
 {
-    public class DeliveryAddress
+    public class DeliveryAddress 
     {
         public int IdAdress { get; set; }
         public string ZipCode { get; set; }
@@ -40,6 +41,8 @@ namespace WeChipCredit.Models
             };
             return FakeAdress;
         }
+
+
 
     }
 

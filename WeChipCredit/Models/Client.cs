@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace WeChipCredit.Models
 {
-    public class Client
+    public class Client : ICloneable
     {
         public int IdClient { get; set; }
         public string Name { get; set; }
@@ -11,16 +12,13 @@ namespace WeChipCredit.Models
         public sbyte Ddd { get; set; }
         public int Phone { get; set; }
         public float VlCredit { get; set; }
-        //public int IdStatus { get; set; }
-        //public Status _status
-        //{
-        //    get { return Status.GetStatus().Where(w => w.Id == IdStatus).FirstOrDefault(); }
-        //    set { _status = Status.GetStatus().Where(w => w.Id == IdStatus).FirstOrDefault(); }
-        //}
+
+        public float VlCreditAvailable { get; set; }
 
         public DeliveryAddress _Address { get; set; }
 
         public Status _Status { get; set; }
+
 
         public Client(int id, string name, string cpf, sbyte ddd, int phone, float vlCredit, Status _status)
         {
@@ -31,7 +29,7 @@ namespace WeChipCredit.Models
             Phone = phone;
             VlCredit = vlCredit;
             _Status = _status;
-            //IdStatus = idStatus;
+            VlCreditAvailable = vlCredit;
         }
 
         public Client()
@@ -54,6 +52,12 @@ namespace WeChipCredit.Models
             };
             return FakeClientList;
         }
+
+        public object Clone()
+        {
+            return this.MemberwiseClone();
+        }
+
     }
 
 }

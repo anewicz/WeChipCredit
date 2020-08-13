@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace WeChipCredit.Models
 {
@@ -35,6 +36,8 @@ namespace WeChipCredit.Models
             };
             return StatusList;
         }
+
+
     }
 
 }

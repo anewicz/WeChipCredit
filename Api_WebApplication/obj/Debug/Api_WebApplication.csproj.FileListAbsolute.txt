@@ -71,10 +71,6 @@ D:\PROVA PROCESSO SELETIVO\Api_WebApplication\obj\Debug\Api_WebApplication.pdb
 D:\PROVA PROCESSO SELETIVO\Api_WebApplication\bin\WeChipCredit.exe
 D:\PROVA PROCESSO SELETIVO\Api_WebApplication\bin\WeChipCredit.pdb
 D:\PROVA PROCESSO SELETIVO\Api_WebApplication\bin\WeChipCredit.exe.config
-D:\PROVA PROCESSO SELETIVO\WeChipCredit\Api_WebApplication\obj\Debug\Api_WebApplication.csprojAssemblyReference.cache
-D:\PROVA PROCESSO SELETIVO\WeChipCredit\Api_WebApplication\obj\Debug\Api_WebApplication.csproj.CoreCompileInputs.cache
-D:\PROVA PROCESSO SELETIVO\WeChipCredit\Api_WebApplication\obj\Debug\Api_WebApplication.dll
-D:\PROVA PROCESSO SELETIVO\WeChipCredit\Api_WebApplication\obj\Debug\Api_WebApplication.pdb
 D:\PROVA PROCESSO SELETIVO\WeChipCredit\Api_WebApplication\bin\Api_WebApplication.dll.config
 D:\PROVA PROCESSO SELETIVO\WeChipCredit\Api_WebApplication\bin\Api_WebApplication.dll
 D:\PROVA PROCESSO SELETIVO\WeChipCredit\Api_WebApplication\bin\Api_WebApplication.pdb
@@ -143,4 +139,8 @@ D:\PROVA PROCESSO SELETIVO\WeChipCredit\Api_WebApplication\bin\Microsoft.CodeDom
 D:\PROVA PROCESSO SELETIVO\WeChipCredit\Api_WebApplication\bin\pt-br\System.Net.Http.Formatting.resources.dll
 D:\PROVA PROCESSO SELETIVO\WeChipCredit\Api_WebApplication\bin\pt-br\System.Web.Http.resources.dll
 D:\PROVA PROCESSO SELETIVO\WeChipCredit\Api_WebApplication\bin\pt-br\System.Web.Http.WebHost.resources.dll
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\Api_WebApplication\obj\Debug\Api_WebApplication.csprojAssemblyReference.cache
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\Api_WebApplication\obj\Debug\Api_WebApplication.csproj.CoreCompileInputs.cache
 D:\PROVA PROCESSO SELETIVO\WeChipCredit\Api_WebApplication\obj\Debug\Api_WebApplication.csproj.CopyComplete
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\Api_WebApplication\obj\Debug\Api_WebApplication.dll
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\Api_WebApplication\obj\Debug\Api_WebApplication.pdb

@@ -1,12 +1,15 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace WeChipCredit.Models
 {
-    public class Offer
+    public class Offer : ICloneable
     {
         public int IdOffer { get; set; }
         public Client _Client { get; set; }
         public List<Product> _Products { get; set; }
+
+
 
         public float TotalOffer
         {
@@ -42,6 +45,10 @@ namespace WeChipCredit.Models
             return result;
         }
 
+        public object Clone()
+        {
+            return this.MemberwiseClone();
+        }
 
     }
 }

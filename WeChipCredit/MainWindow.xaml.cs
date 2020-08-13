@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
@@ -19,6 +21,7 @@ namespace WeChipCredit
         List<Status> _Status = new List<Status>();
         List<Offer> _Offers = new List<Offer>();
         List<Product> _OfferProducts = new List<Product>();
+        Offer offerProcess = new Offer();
 
         public MainWindow()
         {
@@ -142,7 +145,6 @@ namespace WeChipCredit
                         sttId.Text = finder._Status.IdStatus.ToString();
                         sttCode.Text = finder._Status.CodStatus.ToString();
                         sttName.Text = finder._Status.NmStatus.ToString();
-
                     }
                 }
             }
@@ -200,9 +202,8 @@ namespace WeChipCredit
                         client._Status = status;
                     }
                     _Clients.Add(client);
-                    ClientList.Items.Clear();
-                    PopulateClientData();
                     ClientRefreshFields();
+                    OfferRefreshFields();
 
                     MessageBox.Show($" {client.Name} - Foi cadastrado com Sucesso!");
 
@@ -247,9 +248,8 @@ namespace WeChipCredit
                         clientID.Ddd = sbyte.Parse(DDD);
                         clientID.Phone = int.Parse(Fone);
                         clientID.VlCredit = float.Parse(CliCredit.Text);
-                        ClientList.Items.Clear();
-                        PopulateClientData();
                         ClientRefreshFields();
+                        OfferRefreshFields();
 
                         MessageBox.Show($@" {clientID.Name.ToUpper()} foi alterado com Sucesso!");
 
@@ -276,9 +276,8 @@ namespace WeChipCredit
                 {
                     _Clients.Remove(findClient);
                     MessageBox.Show($@"{clientNm} Foi deletado com Sucesso!");
-                    ClientList.Items.Clear();
-                    PopulateClientData();
                     ClientRefreshFields();
+                    OfferRefreshFields();
                 }
 
             }
@@ -293,16 +292,27 @@ namespace WeChipCredit
         {
             if (RegisterCheck.IsChecked == true)
             {
+                cliTitle.Document.Blocks.Clear();
+                Paragraph paragraph = new Paragraph();
+                paragraph.Inlines.Add(new Bold(new Run("CADASTRAR CLIENTE")));
+                cliTitle.Document = new FlowDocument(paragraph);
+
                 CollapsedStacksInMain();
                 /*STACKS - Novo Cadastro*/
                 CliCredit.IsEnabled = true;
                 RegisterEditForms.Visibility = Visibility.Visible; /*Forms info Cliente*/
                 ButtonStRegister.Visibility = Visibility.Visible;  /*Botao cadastrar novo*/
                 SubMnMailing.Visibility = Visibility.Visible;
+                clititleStack.Visibility = Visibility.Visible;
 
             }
             else if (EditCheck.IsChecked == true)
             {
+                cliTitle.Document.Blocks.Clear();
+                Paragraph paragraph = new Paragraph();
+                paragraph.Inlines.Add(new Bold(new Run("EDITAR CADASTRO ")));
+                cliTitle.Document = new FlowDocument(paragraph);
+
                 CollapsedStacksInMain();
                 /*STACKS - Editar Cadastro*/
                 RegisterEditForms.Visibility = Visibility.Visible; /*Forms info Cliente*/
@@ -310,15 +320,22 @@ namespace WeChipCredit
                 ListRegister.Visibility = Visibility.Visible;      /*Lista para editar*/
                 CliStId.Visibility = Visibility.Visible;           /*Campo ID e Status*/
                 SubMnMailing.Visibility = Visibility.Visible;
+                clititleStack.Visibility = Visibility.Visible;
 
             }
             else if (DeleteCheck.IsChecked == true)
             {
+                cliTitle.Document.Blocks.Clear();
+                Paragraph paragraph = new Paragraph();
+                paragraph.Inlines.Add(new Bold(new Run("DELETAR CADASTRO")));
+                cliTitle.Document = new FlowDocument(paragraph);
+
                 CollapsedStacksInMain();
                 /*STACKS - Deletar Cadastro*/
                 ListRegister.Visibility = Visibility.Visible;
                 ButtonStDelete.Visibility = Visibility.Visible;
                 SubMnMailing.Visibility = Visibility.Visible;
+                clititleStack.Visibility = Visibility.Visible;
             };
 
         }
@@ -329,7 +346,7 @@ namespace WeChipCredit
 
         #region MetodosUteis
 
-        /*Atualiza campos text*/
+        /*limpa text dos clientes*/
         private void ClientRefreshFields()
         {
             CliName.Text = "";
@@ -343,6 +360,78 @@ namespace WeChipCredit
             sttCode.Text = "";
             sttName.Text = "";
 
+            ClientList.Items.Clear();
+            PopulateClientData();
+
+        }
+
+        /*limpa text da Oferta*/
+        private void OfferRefreshFields()
+        {
+            OfferZip.Text = "";
+            OfferStreet.Text = "";
+            OfferNumber.Text = "";
+            OfferComplement.Text = "";
+            OfferNeighborhood.Text = "";
+            OfferState.Text = "";
+            OfferCity.Text = "";
+
+            OfferName.Text = "";
+            OfferDdd.Text = "";
+            OfferPhone.Text = "";
+
+            SaldoRestante.Document.Blocks.Clear();
+            SearchClients.Items.Clear();
+            _OfferProducts.RemoveAll(w => w.IdProduct > 0);
+            SearchProducts.Items.Clear();
+            SearchStatus.Items.Clear();
+            SeaNameCpf.Clear();
+
+            PopulateStatusData();
+            PopulateProductData();
+        }
+
+        /*Validação preenchimento*/
+        private bool valField(string valTipe, int tipe)
+        {
+            /*tipe = 1 mensagem padrão obrigatoriedade, 2 = mensagem personalizada*/
+            var msg = string.Empty;
+
+            if (valTipe == "hardware")
+            {
+                msg = string.IsNullOrEmpty(OfferZip.Text) ? "CEP, " : "";
+                msg += string.IsNullOrEmpty(OfferStreet.Text) ? "RUA, " : "";
+                msg += string.IsNullOrEmpty(OfferNumber.Text) ? "Nº, " : "";
+                msg += string.IsNullOrEmpty(OfferNeighborhood.Text) ? "BAIRRO, " : "";
+                msg += string.IsNullOrEmpty(OfferState.Text) ? "ESTADO, " : "";
+                msg += string.IsNullOrEmpty(OfferCity.Text) ? "CIDADE, " : "";
+
+            }
+            else if (valTipe == "cliOffert")
+            {
+                msg = string.IsNullOrEmpty(OfferName.Text) ? "NOME, " : "";
+                msg += string.IsNullOrEmpty(OfferDdd.Text) ? "DDD, " : "";
+                msg += string.IsNullOrEmpty(OfferPhone.Text) ? "TELEFONE, " : "";
+
+            }
+            else if (valTipe == "cliFoneInfo")
+            {
+                var DDD = string.Join("", OfferDdd.Text.ToCharArray().Where(Char.IsDigit));
+                var Fone = string.Join("", OfferPhone.Text.ToCharArray().Where(Char.IsDigit));
+
+                if (DDD.Length != 2)
+                    msg = "DDD Inválido - Deve Conter 2 Digitos Numericos";
+                else if (Fone.Length > 9 || Fone.Length < 8)
+                    msg = "Telefone Inválido - Telefone deve conter entre 8 e 9 Digitos Numericos";
+            }
+
+            if (msg != "")
+            {
+                AtentionBox(msg, tipe);
+                return true;
+            }
+            else
+                return false;
         }
 
         /*Simplificar o codigo para box de validação*/
@@ -368,7 +457,7 @@ namespace WeChipCredit
             SubMnOffers.Visibility = Visibility.Collapsed;       /*Submenu Ofertas*/
             SearchOfferInfos.Visibility = Visibility.Collapsed;      /*Oferta*/
             Offer.Visibility = Visibility.Collapsed;
-
+            clititleStack.Visibility = Visibility.Collapsed;
         }
 
         #endregion MetodosUteis
@@ -376,66 +465,103 @@ namespace WeChipCredit
         #region TelaOfertar
         private void Button_ClickOfertar(object sender, RoutedEventArgs e)
         {
+            bool resFieldValidate = false;
             try
             {
                 if (SearchClients.SelectedItem == null)
                     MessageBox.Show($"Obrigatorio selecionar um cliente para continuar!");
                 else
                 {
-                    var msg = string.IsNullOrEmpty(OfferName.Text) ? "NOME, " : "";
-                    msg += string.IsNullOrEmpty(OfferDdd.Text) ? "DDD, " : "";
-                    msg += string.IsNullOrEmpty(OfferPhone.Text) ? "TELEFONE, " : "";
-
-                    var DDD = string.Join("", OfferDdd.Text.ToCharArray().Where(Char.IsDigit));
-                    var Fone = string.Join("", OfferPhone.Text.ToCharArray().Where(Char.IsDigit));
-
-                    if (msg == "")
+                    /*Valida campos do cliente/offerta para prosseguir*/
+                    resFieldValidate = valField("cliOffert", 1);
+                    if (!resFieldValidate)
                     {
                         var clientId = (int)((ComboBoxItem)SearchClients.SelectedItem).Tag;
                         var selClient = _Clients.Where(w => w.IdClient == clientId).FirstOrDefault();
 
-                        if (DDD.Length != 2)
-                            AtentionBox("DDD Inválido - Deve Conter 2 Digitos Numericos", 2);
-                        else if (Fone.Length > 9 || Fone.Length < 8)
-                            AtentionBox("Telefone Inválido - Telefone deve conter entre 8 e 9 Digitos Numericos", 2);
-                        else if (SearchStatus.SelectedItem == null)
-                            MessageBox.Show($"Selecione um Status para continuar!");
-                        else
+                        /*Valida DDD e Fone antes de continuar*/
+                        resFieldValidate = valField("cliFoneInfo", 2);
+                        if (!resFieldValidate)
                         {
-                            var sttId = (int)((ComboBoxItem)SearchStatus.SelectedItem).Tag;
-                            var selStatus = _Status.Where(w => w.IdStatus == sttId).FirstOrDefault();
-
-                            var offerClient = _Offers.Where(w => w._Client.IdClient == clientId).FirstOrDefault();
-
-                            if (selStatus.IsSale == true && offerClient._Products.Count == 0)
-                                MessageBox.Show($"Adicione um produto para venda!");
-                            else if (selStatus.IsSale == true && offerClient.TotalOffer > offerClient._Client.VlCredit)
-                                MessageBox.Show($"Saldo Créditos insuficientes!");
-                            else if (selStatus.IsSale == false && offerClient._Products.Count > 0)
-                                MessageBox.Show($"Não é possivel recusar oferta com produtos adicionados para venda!");
+                            if (SearchStatus.SelectedItem == null)
+                                MessageBox.Show($"Selecione um Status para continuar!");
                             else
                             {
+                                var sttId = (int)((ComboBoxItem)SearchStatus.SelectedItem).Tag;
+                                var selStatus = _Status.Where(w => w.IdStatus == sttId).FirstOrDefault();
+                                //var offerClient = _Offers.Where(w => w._Client.IdClient == clientId).FirstOrDefault();
 
-                                if (MessageBox.Show($@"Deseja salvar as modificações para {OfferName.Text.ToUpper()}?", "Confirmação", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                                if (selStatus.IsSale == true && offerProcess._Products.Count == 0)
+                                    MessageBox.Show($"Adicione um produto para venda!");
+                                else if (selStatus.IsSale == true && offerProcess.TotalOffer > offerProcess._Client.VlCredit)
+                                    MessageBox.Show($"Saldo Créditos insuficientes!");
+                                else if (selStatus.IsSale == false && offerProcess._Products.Count > 0)
+                                    MessageBox.Show($"Não é possivel recusar oferta com produtos adicionados para venda!");
+                                else
                                 {
-                                    offerClient._Client._Status = selStatus;
-                                    selClient._Status = selStatus;
-                                    selClient.Name = OfferName.Text.ToUpper();
-                                    selClient.Ddd = sbyte.Parse(OfferDdd.Text);
-                                    selClient.Phone = int.Parse(OfferPhone.Text);
 
-                                    MessageBox.Show($@" Registro atualizado com Sucesso!");
-                                    PopulateOfferProductsData();
-                                    ClientList.Items.Clear();
-                                    PopulateClientData();
-                                    ClientRefreshFields();
+                                    /*Valida se possui produtos tipo Hardware*/
+                                    var hasHardware = _OfferProducts.Where(w => w.TpProduct == "HARDWARE").Count();
+                                    if (hasHardware > 0)
+                                        resFieldValidate = valField("hardware", 1);
+
+                                    if (!resFieldValidate)
+                                    {
+                                        if (MessageBox.Show($@"Deseja salvar as modificações para {OfferName.Text.ToUpper()}?", "Confirmação", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                                        {
+                                            offerProcess._Client._Status = selStatus;
+                                            selClient._Status = selStatus;
+                                            selClient.Name = OfferName.Text.ToUpper();
+                                            selClient.Ddd = sbyte.Parse(OfferDdd.Text);
+                                            selClient.Phone = int.Parse(OfferPhone.Text);
+                                            selClient.VlCreditAvailable = offerProcess._Client.VlCredit - offerProcess.TotalOffer;
+
+                                            /*Congelar a Classe Cliente para guardar Ofertas anteriores ex: caiu a ligação e depois venda e não alterar nos dois*/
+                                            offerProcess._Client = (Client)offerProcess._Client.Clone();
+
+                                            /*Adiciona Endereço caso tenha*/
+                                            if (!string.IsNullOrEmpty(OfferState.Text) && !string.IsNullOrEmpty(OfferCity.Text) && !string.IsNullOrEmpty(OfferStreet.Text))
+                                            {
+                                                DeliveryAddress address = new DeliveryAddress();
+                                                {
+                                                    address.IdAdress = 1;
+                                                    address.ZipCode = OfferZip.Text;
+                                                    address.Street = OfferStreet.Text.ToUpper();
+                                                    address.Number = OfferNumber.Text.ToUpper();
+                                                    address.Complement = OfferComplement.Text.ToUpper();
+                                                    address.Neighborhood = OfferNeighborhood.Text.ToUpper();
+                                                    address.State = OfferState.Text.ToUpper();
+                                                    address.City = OfferCity.Text.ToUpper();
+                                                }
+
+                                                offerProcess._Client._Address = address;
+                                            }
+
+                                            try
+                                            {
+                                                var ofertaLimpa = (Offer)offerProcess.Clone();
+
+                                                /*Insere a Venda na Lista de Ofertas*/
+                                                _Offers.Add(ofertaLimpa);
+
+                                                MessageBox.Show($@" Registro atualizado com Sucesso!");
+                                                ClientRefreshFields();
+                                                OfferRefreshFields();
+                                                PopulateOfferProductsData();
+                                                CollapsedStacksInMain();
+                                                Offer.Visibility = Visibility.Visible;
+
+                                            }
+                                            catch { MessageBox.Show($@" Ocorreu um Erro ao salvar!"); }
+
+
+                                        }
+                                    }
 
                                 }
                             }
                         }
                     }
-                    else
-                        AtentionBox(msg, 1);
                 }
             }
             catch
@@ -459,11 +585,9 @@ namespace WeChipCredit
                 var productId = (int)((ComboBoxItem)SearchProducts.SelectedItem).Tag;
                 var _auxProd = _Products.Where(w => w.IdProduct == productId).FirstOrDefault();
 
-                var offerClient = _Offers.Where(w => w._Client.IdClient == clientId).FirstOrDefault();
-
                 _OfferProducts.Add(_auxProd);
-                offerClient._Products.Add(_auxProd);
-                RefreshVlOffer(offerClient.TotalOffer, offerClient._Client.VlCredit);
+                offerProcess._Products.Add(_auxProd);
+                RefreshVlOffer(offerProcess.TotalOffer, offerProcess._Client.VlCredit);
                 PopulateOfferProductsData();
             }
             catch
@@ -483,11 +607,9 @@ namespace WeChipCredit
 
                 var product = (Product)OffersProductsList.SelectedItems[0];
 
-                var offerClient = _Offers.Where(w => w._Client.IdClient == clientId).FirstOrDefault();
-
                 _OfferProducts.Remove(product);
-                offerClient._Products.Remove(product);
-                RefreshVlOffer(offerClient.TotalOffer, offerClient._Client.VlCredit);
+                offerProcess._Products.Remove(product);
+                RefreshVlOffer(offerProcess.TotalOffer, offerProcess._Client.VlCredit);
                 PopulateOfferProductsData();
             }
             catch
@@ -525,10 +647,8 @@ namespace WeChipCredit
         private void Button_Search(object sender, RoutedEventArgs e)
         {
             var name = SeaNameCpf.Text;
-            SaldoRestante.Document.Blocks.Clear();
+            OfferRefreshFields();
             CollapsedStacksInMain();
-            SearchClients.Items.Clear();
-            _OfferProducts.RemoveAll(w => w.IdProduct > 0);
             PopulateOfferProductsData();
             Offer.Visibility = Visibility.Visible;
 
@@ -556,13 +676,13 @@ namespace WeChipCredit
                     if (resultSearch.Count() > 0)
                     {
                         SearchOfferInfos.Visibility = Visibility.Visible;
-                        SeaNameCpf.Clear();
+
                     }
                     else
                     {
                         SearchOfferInfos.Visibility = Visibility.Collapsed;
                         MessageBox.Show($"O Cliente não foi encontrado!");
-                        SeaNameCpf.Clear();
+
                     }
                 }
             }
@@ -575,7 +695,7 @@ namespace WeChipCredit
         #endregion Botoes
 
         #region ListasSuspensas
-        /*Lista clientes dentro da regra cria oferta*/
+        /*Lista clientes dentro da regra e cria oferta*/
         private void SearchClients_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
@@ -596,35 +716,27 @@ namespace WeChipCredit
                 paragraph.Inlines.Add(new Run($"{selClient._Status.NmStatus}"));
                 conteudo.Document = new FlowDocument(paragraph);
 
-                Offer offer = new Offer();
-                {
-                    offer.IdOffer = _Offers.Count() + 1;
-                    offer._Client = selClient;
-                    offer.TotalOffer = 0;
-                    offer._Products = new List<Product>();
-                }
+                offerProcess.IdOffer = _Offers.Count() + 1;
+                offerProcess._Client = selClient;
+                offerProcess.TotalOffer = 0;
+                offerProcess._Products = new List<Product>();
 
                 OfferName.Text = selClient.Name.ToUpper();
                 OfferDdd.Text = selClient.Ddd.ToString();
                 OfferPhone.Text = selClient.Phone.ToString();
 
-                _Offers.Add(offer);
                 ClientList.Items.Clear();
                 PopulateClientData();
-                ClientRefreshFields();
-                RefreshVlOffer(offer.TotalOffer, offer._Client.VlCredit);
+
+                RefreshVlOffer(offerProcess.TotalOffer, offerProcess._Client.VlCredit);
             }
             else
             {
                 ClientList.Items.Clear();
                 conteudo.Document.Blocks.Clear();
-                SaldoRestante.Document.Blocks.Clear();
-                OfferName.Clear();
-                OfferDdd.Clear();
-                OfferPhone.Clear();
-                SeaNameCpf.Clear();
+
                 PopulateClientData();
-                ClientRefreshFields();
+                OfferRefreshFields();
             }
 
         }
@@ -635,5 +747,6 @@ namespace WeChipCredit
 
 
     }
+
 }
 

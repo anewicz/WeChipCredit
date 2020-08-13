@@ -72,7 +72,18 @@
                     </StackPanel.Background>
                 </StackPanel>
 
-                <StackPanel  Name="CliStId" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal"  Margin="5,0,5,0" OpacityMask="Black"  HorizontalAlignment="Center" Visibility="Collapsed">
+
+                
+                <StackPanel  Name="clititleStack" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal"  Margin="5,0,5,0" OpacityMask="Black"  HorizontalAlignment="Center" Visibility="Collapsed">
+                    <RichTextBox Name="cliTitle" Margin="60,0,10,0" Padding="5" Height="auto" Width="500" BorderBrush="White" FontWeight="ExtraBold" FontSize="15" IsEnabled="False">
+                        <FlowDocument>
+                            <Paragraph>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                </StackPanel>
+
+                <StackPanel  Name="CliStId" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal"  Margin="5,0,5,0" OpacityMask="Black"  HorizontalAlignment="Center" Visibility="Collapsed">
                     <Label   Name="CliIdL"  Width="120" Content="ID CLIENTE:" HorizontalAlignment="Right"  FontSize="11" Foreground="#FF838383" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right"/>
                     <TextBox Name="CliId"   Width="100" Padding="2,4,4,2" Margin="5,15,5,5"  FontSize="13" FontWeight="Bold" BorderBrush="#FFB6B6B6" IsEnabled="False"/>
 
@@ -81,54 +92,54 @@
                     <TextBox Name="sttName"   Width="200" Padding="2,4,4,2" Margin="5,15,5,5" FontSize="13" FontWeight="Bold" BorderBrush="#FFB6B6B6" IsEnabled="False"  />
                     <TextBox Name="sttCode"   Width="120" Padding="2,4,4,2" Margin="5,15,5,5"  FontSize="13" FontWeight="Bold" BorderBrush="#FFB6B6B6" Visibility="Collapsed"/>
                 </StackPanel>
-
-
-                <StackPanel Name="RegisterEditForms" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Vertical"  Margin="5,0,5,0" OpacityMask="Black" Visibility="Collapsed" HorizontalAlignment="Center">
+                
+                <StackPanel Name="RegisterEditForms" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Vertical"  Margin="5,0,5,0" OpacityMask="Black" Visibility="Collapsed" HorizontalAlignment="Center">
                     <StackPanel  Name="CliStName" Orientation="Horizontal">
-                        <Label   Name="CliNameL"  Width="120" Content="NOME:" HorizontalAlignment="Right"  FontSize="11" Foreground="#FF838383" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right"/>
+                        <Label   Width="120" Content="NOME:" HorizontalAlignment="Right"  FontSize="11" Foreground="#FF838383" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right"/>
                         <TextBox Name="CliName"   Width="550" Padding="2,4,4,2" Margin="5,15,5,5"   FontSize="11" BorderBrush="#FFB6B6B6"/>
                     </StackPanel>
 
                     <StackPanel  Name="CliStCpfL" Orientation="Horizontal">
-                        <Label   Name="CliCpfL"  Width="120" Content="CPF:" HorizontalAlignment="Right"  FontSize="11" Foreground="#FF838383" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right"/>
+                        <Label   Width="120" Content="CPF:" HorizontalAlignment="Right"  FontSize="11" Foreground="#FF838383" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right"/>
                         <TextBox Name="CliCpf"   Width="550" Padding="2,4,4,2" Margin="5"   FontSize="11" BorderBrush="#FFB6B6B6"/>
                     </StackPanel>
 
                     <StackPanel  Name="CliStCreditL" Orientation="Horizontal">
-                        <Label   Name="CliCreditL"  Width="120" Content="CRÉDITO:" HorizontalAlignment="Right"  FontSize="11" Foreground="#FF838383" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right"/>
+                        <Label   Width="120" Content="CRÉDITO:" HorizontalAlignment="Right"  FontSize="11" Foreground="#FF838383" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right"/>
                         <TextBox Name="CliCredit"   Width="550" Padding="2,4,4,2" Margin="5"   FontSize="11" BorderBrush="#FFB6B6B6" IsEnabled="False"/>
                     </StackPanel>
 
                     <StackPanel  Name="CliStDddL" Orientation="Horizontal">
-                        <Label   Name="CliDddL"  Width="120" Content="DDD:" HorizontalAlignment="Right"  FontSize="11" Foreground="#FF838383" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right"/>
+                        <Label   Width="120" Content="DDD:" HorizontalAlignment="Right"  FontSize="11" Foreground="#FF838383" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right"/>
                         <TextBox Name="CliDdd"   Width="550" Padding="2,4,4,2" Margin="5"   FontSize="11" BorderBrush="#FFB6B6B6"/>
                     </StackPanel>
 
                     <StackPanel  Name="CliStPhone" Orientation="Horizontal">
-                        <Label   Name="CliPhoneL"  Width="120" Content="TELEFONE:" HorizontalAlignment="Right"  FontSize="11" Foreground="#FF838383" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right"/>
+                        <Label   Width="120" Content="TELEFONE:" HorizontalAlignment="Right"  FontSize="11" Foreground="#FF838383" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right"/>
                         <TextBox Name="CliPhone"   Width="550" Padding="2,4,4,2" Margin="5"   FontSize="11" BorderBrush="#FFB6B6B6"/>
                     </StackPanel>
 
                     <StackPanel  Name="ButtonStRegister" Orientation="Horizontal" Visibility="Collapsed">
-                        <Label   Name="ButtonRegisterL"  Width="120" Content="" HorizontalAlignment="Right"  FontSize="11" Foreground="#FF838383" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right"/>
+                        <Label   Width="120" Content="" HorizontalAlignment="Right"  FontSize="11" Foreground="#FF838383" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right"/>
                         <Button  Name="ButtonRegister"  Content="ADICIONAR NOVO CLIENTE" Grid.Row="6"   Grid.Column="1" Height="25" Width="150" HorizontalAlignment="Left" Margin="5"  FontSize="11" Click="Button_ClickNewRegister"/>
                     </StackPanel>
 
                     <StackPanel  Name="ButtonStEdit" Orientation="Horizontal" Visibility="Collapsed">
-                        <Label   Name="ButtonEditL"  Width="120" Content="" HorizontalAlignment="Right"  FontSize="11" Foreground="#FF838383" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right"/>
+                        <Label   Width="120" Content="" HorizontalAlignment="Right"  FontSize="11" Foreground="#FF838383" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right"/>
                         <Button  Name="ButtonEdit"  Content="EDITAR CLIENTE"  Height="25" Width="150" HorizontalAlignment="Left" Margin="5" FontSize="11" Click="Button_ClickEditRegister" />
                     </StackPanel>
                 </StackPanel>
 
                 <StackPanel Name="ListRegister" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Margin="117,0,0,0" HorizontalAlignment="Center" Visibility="Collapsed" >
-                    <Label   x:Name="ListRegisterCli"   Content="CLIENTES CADASTRADOS"  Margin="5,0,0,0" FontSize="11" Foreground="#FF838383" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" />
+                    <Label   x:Name="ListRegisterCli"   Content="CLIENTES CADASTRADOS"  Margin="5,6,0,0" FontSize="11" Foreground="#FF838383" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" />
                     <ListView x:Name="ClientList" Height="150" Width="550" HorizontalAlignment="Left" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Visible" Foreground="#FF3D3D3D" BorderBrush="#FFD6D6D6" Background="#FFFCFCFC" PreviewMouseLeftButtonUp="ClientList_PreviewMouseLeftBtUp" >
                         <ListView.View>
                             <GridView>
-                                <GridViewColumn Header = "Id" DisplayMemberBinding="{Binding Path=Id, StringFormat=0000}" Width="auto"/>
+                                <GridViewColumn Header = "Id" DisplayMemberBinding="{Binding Path=IdClient, StringFormat=0000}" Width="auto"/>
                                 <GridViewColumn Header = "Nome" DisplayMemberBinding="{Binding Name}" Width="auto"/>
                                 <GridViewColumn Header = "CPF" DisplayMemberBinding="{Binding Path=Cpf, StringFormat=00000000000}" Width="auto"/>
                                 <GridViewColumn Header = "Credito" DisplayMemberBinding="{Binding Path=VlCredit, StringFormat=0.00}" Width="auto"/>
+                                <GridViewColumn Header = "Credito Disponivel" DisplayMemberBinding="{Binding Path=VlCreditAvailable, StringFormat=0.00}" Width="auto"/>
                                 <GridViewColumn Header = "DDD" DisplayMemberBinding="{Binding  Path=Ddd, StringFormat=(00)}" Width="auto"/>
                                 <GridViewColumn Header = "Telefone" DisplayMemberBinding="{Binding Path=Phone, StringFormat=0000-0000}" Width="auto"/>
                                 <GridViewColumn Header = "Status" DisplayMemberBinding="{Binding _Status.NmStatus}" Width="auto"/>
@@ -137,7 +148,7 @@
                     </ListView>
 
                     <StackPanel  Name="ButtonStDelete" Orientation="Horizontal" Margin="-123,5,0,0" Visibility="Collapsed">
-                        <Label   Name="ButtonDeleteL"   Width="120" Content="" HorizontalAlignment="Right"  FontSize="11" Foreground="#FF838383" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right"/>
+                        <Label   Width="120" Content="" HorizontalAlignment="Right"  FontSize="11" Foreground="#FF838383" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right"/>
                         <Button  Name="ButtoDelete"  Content="DELETAR CLIENTE"  Height="25" Width="150" HorizontalAlignment="Left" Margin="5" FontSize="11" Click="Button_ClickDeleteRegister" />
                     </StackPanel>
                 </StackPanel>
@@ -151,16 +162,16 @@
                         <Button  Name="ButtoSearch"  Content="BUSCAR"  Height="25" Width="50" Margin="5" FontSize="11" Click="Button_Search" />
                     </StackPanel>
 
-                    <StackPanel   Name="SearchOfferInfos">
+                    <StackPanel  Name="SearchOfferInfos">
                         <Label   Content="Selecione o Cliente:" FontSize="11" Foreground="#FF838383" VerticalAlignment="center" HorizontalAlignment="center"/>
                         <ComboBox Name="SearchClients"   Margin="5" Width="500" FontSize="11" BorderBrush="#FFB6B6B6" SelectionChanged="SearchClients_SelectionChanged"/>
 
-                        <StackPanel  Name="OfferStEditable" Margin="0,5,0,0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <Label   Name="OfferNameL"   Width="auto"  Content="NOME:" HorizontalAlignment="Center"  FontSize="11" Foreground="#FF838383" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                        <StackPanel  Margin="0,5,0,0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Label   Width="auto"  Content="NOME:" HorizontalAlignment="Center"  FontSize="11" Foreground="#FF838383" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
                             <TextBox Name="OfferName"    Width="200"   Padding="2,4,4,2" Margin="5"   FontSize="11" BorderBrush="#FFB6B6B6"/>
-                            <Label   Name="OfferDddL"    Width="auto"  Content="DDD:" HorizontalAlignment="Center"  FontSize="11" Foreground="#FF838383" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                            <Label   Width="auto"  Content="DDD:" HorizontalAlignment="Center"  FontSize="11" Foreground="#FF838383" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
                             <TextBox Name="OfferDdd"     Width="40"    Padding="2,4,4,2" Margin="5"   FontSize="11" BorderBrush="#FFB6B6B6"/>
-                            <Label   Name="OfferPhoneL"  Width="auto"  Content="TELEFONE:" HorizontalAlignment="Center"  FontSize="11" Foreground="#FF838383" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                            <Label   Width="auto"  Content="TELEFONE:" HorizontalAlignment="Center"  FontSize="11" Foreground="#FF838383" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
                             <TextBox Name="OfferPhone"   Width="100"  Padding="2,4,4,2" Margin="5"   FontSize="11" BorderBrush="#FFB6B6B6"/>
                         </StackPanel>
 
@@ -170,11 +181,12 @@
                                 </Paragraph>
                             </FlowDocument>
                         </RichTextBox>
+                        <StackPanel  Margin="0,10,0,0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Label   Content="Selecione o Produto:" FontSize="11" Foreground="#FF838383" VerticalAlignment="center" HorizontalAlignment="center"/>
+                            <ComboBox Name="SearchProducts"  Margin="5" Width="390" FontSize="11" BorderBrush="#FFB6B6B6" />
+                        </StackPanel>
 
-                        <Label   Content="Selecione o Produto:" FontSize="11" Foreground="#FF838383" VerticalAlignment="center" HorizontalAlignment="center"/>
-                        <ComboBox Name="SearchProducts"  Margin="5" Width="500" FontSize="11" BorderBrush="#FFB6B6B6" />
-
-                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <StackPanel Margin="0,10,0,0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
                             <RichTextBox Name="SaldoRestante" Margin="-9,0,5,0" Padding="5" Height="25" Width="250" BorderBrush="LightGray" Background="Wheat" IsEnabled="False">
                                 <FlowDocument>
                                     <Paragraph>
@@ -191,7 +203,7 @@
                             <ListView x:Name="OffersProductsList" Height="150" Width="500" HorizontalAlignment="Left" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Visible" Foreground="#FF3D3D3D" BorderBrush="#FFD6D6D6" Background="#FFFCFCFC"  >
                                 <ListView.View>
                                     <GridView>
-                                        <GridViewColumn Header = "Id" DisplayMemberBinding="{Binding Path=Id, StringFormat=0000 }" Width="auto"/>
+                                        <GridViewColumn Header = "Id" DisplayMemberBinding="{Binding Path=IdProduct, StringFormat=0000 }" Width="auto"/>
                                         <GridViewColumn Header = "Produto" DisplayMemberBinding="{Binding NmProduct}" Width="auto"/>
                                         <GridViewColumn Header = "Valor" DisplayMemberBinding="{Binding Path=VlPrice, StringFormat=0.00}" Width="auto"/>
                                         <GridViewColumn Header = "Tipo" DisplayMemberBinding="{Binding TpProduct}" Width="auto"/>
@@ -200,9 +212,32 @@
                             </ListView>
                         </StackPanel>
 
-                        <Label   Content="Selecione o Status:" FontSize="11" Foreground="#FF838383" VerticalAlignment="center" HorizontalAlignment="center"/>
-                        <ComboBox Name="SearchStatus"    Margin="5" Width="500" FontSize="11" BorderBrush="#FFB6B6B6" />
+                                               
+                        <StackPanel  Margin="0,5,0,0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Label   Width="auto"  Content="CEP:" HorizontalAlignment="Center"  Margin="-10,5,0,5" FontSize="11" Foreground="#FF838383" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                            <TextBox Name="OfferZip"          Width="100"   Padding="2,4,4,2" Margin="-0,5,0,5"   FontSize="11" BorderBrush="#FFB6B6B6"/>
+                            <Label   Width="auto"  Content="RUA:" HorizontalAlignment="Center"  FontSize="11" Foreground="#FF838383" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                            <TextBox Name="OfferStreet"       Width="150"    Padding="2,4,4,2" Margin="0,5,0,5"   FontSize="11" BorderBrush="#FFB6B6B6"/>
+                            <Label   Width="auto"  Content="Nº:" HorizontalAlignment="Center"  FontSize="11" Foreground="#FF838383" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                            <TextBox Name="OfferNumber"       Width="30"  Padding="2,4,4,2" Margin="0,5,0,5"   FontSize="11" BorderBrush="#FFB6B6B6"/>
+                            <Label   Width="auto"  Content="COMPL:" HorizontalAlignment="Center"  FontSize="11" Foreground="#FF838383" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                            <TextBox Name="OfferComplement"   Width="85"  Padding="2,4,4,2" Margin="0,5,0,5"   FontSize="11" BorderBrush="#FFB6B6B6"/>
+                        </StackPanel>
+                        
+                        <StackPanel  Margin="0,5,0,0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Label   Width="auto"  Content="BAIRRO:" Margin="-7,5,0,5" HorizontalAlignment="Center"  FontSize="11" Foreground="#FF838383" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                            <TextBox Name="OfferNeighborhood"  Width="120"  Padding="2,4,4,2" Margin="5"   FontSize="11" BorderBrush="#FFB6B6B6"/>
+                            <Label   Width="auto"  Content="CIDADE:" HorizontalAlignment="Center"  FontSize="11" Foreground="#FF838383" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                            <TextBox Name="OfferCity"         Width="100"  Padding="2,4,4,2" Margin="5"   FontSize="11" BorderBrush="#FFB6B6B6"/>
+                            <Label   Width="auto"  Content="ESTADO:" HorizontalAlignment="Center"  FontSize="11" Foreground="#FF838383" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                            <TextBox Name="OfferState"        Width="105"  Padding="2,4,4,2" Margin="5"   FontSize="11" BorderBrush="#FFB6B6B6"/>
+                        </StackPanel>
 
+                        <StackPanel  Margin="0,10,0,10" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Label   Content="Selecione o Status:" FontSize="11" Foreground="#FF838383" VerticalAlignment="center" />
+                            <ComboBox Name="SearchStatus"    Margin="5" Width="400" FontSize="11" BorderBrush="#FFB6B6B6" />
+                        </StackPanel>
+                        
                         <StackPanel  Name="ButtonStOfertar" Margin="-70,0,0,0" Orientation="Vertical">
                             <Label   Name="ButtonOfertarL"  Width="120" Content="" FontSize="11" Foreground="#FF838383" HorizontalAlignment="center"/>
                             <Button  Name="ButtoOfertar"  Content="OFERTAR" Grid.Column="1" Height="25" Width="150" Margin="-281,-17,0,0" FontSize="11" Click="Button_ClickOfertar" />

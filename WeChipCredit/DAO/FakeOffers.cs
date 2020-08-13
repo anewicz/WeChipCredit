@@ -18,7 +18,7 @@ namespace WeChipCredit.DAO
             List<Client> _Clients = Client.GetFakeClients();
             List<Status> _Status = Status.GetStatus();
             List<DeliveryAddress> _FakeAddress = DeliveryAddress.GetFakeAdress();
-            
+
 
             foreach (var c in _Clients)
             {
@@ -41,6 +41,7 @@ namespace WeChipCredit.DAO
             offert._Client._Address = adress;
             var product = _Products.Where(w => w.IdProduct == 2).FirstOrDefault();
             offert._Products.Add(product);
+            offert._Client.VlCreditAvailable = offert._Client.VlCredit - offert.TotalOffer;
 
             /*FAKE 2 CAIU LIGAÇÃO*/
             offert = _FakeBaseOffers.Where(w => w._Client.IdClient == 2).FirstOrDefault();
@@ -79,6 +80,7 @@ namespace WeChipCredit.DAO
             offert._Products.Add(product);
             product = _Products.Where(w => w.IdProduct == 5).FirstOrDefault();
             offert._Products.Add(product);
+            offert._Client.VlCreditAvailable = offert._Client.VlCredit - offert.TotalOffer;
 
             return _FakeBaseOffers;
 
