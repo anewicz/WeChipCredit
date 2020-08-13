@@ -161,13 +161,8 @@ namespace WeChipCredit
         /*Adicionar Cliente*/
         private void Button_ClickNewRegister(object sender, RoutedEventArgs e)
         {
-
-            var msg = string.IsNullOrEmpty(CliName.Text) ? "NOME, " : "";
-            msg += string.IsNullOrEmpty(CliCpf.Text) ? "CPF, " : "";
-            msg += string.IsNullOrEmpty(CliDdd.Text) ? "DDD, " : "";
-            msg += string.IsNullOrEmpty(CliPhone.Text) ? "TELEFONE, " : "";
-
-            if (msg == "")
+            bool resFieldValidate = valField("cliCad", 1);
+            if (!resFieldValidate)
             {
                 /*Padroniza o CPF e Retira tudo que não é Numérico do CPF e valida numeração restante se é CPF valido*/
                 var CPF = string.Join("", CliCpf.Text.ToCharArray().Where(Char.IsDigit));
@@ -178,7 +173,7 @@ namespace WeChipCredit
                     AtentionBox("Digite um CPF Válido com 11 Digitos Numericos", 2);
                 else if (DDD.Length != 2)
                     AtentionBox("DDD Inválido - Deve Conter 2 Digitos Numericos", 2);
-                else if (Fone.Length > 9 && Fone.Length < 8)
+                else if (Fone.Length > 9 || Fone.Length < 8)
                     AtentionBox("Telefone Inválido - Telefone deve conter entre 8 e 9 Digitos Numericos", 2);
                 else
                 {
@@ -188,12 +183,13 @@ namespace WeChipCredit
                     var ClienPhone = int.Parse(Fone);
                     var ClienVlCredit = string.IsNullOrEmpty(CliCredit.Text) ? 0 : float.Parse(CliCredit.Text.Replace(".", ","));
 
-
                     var status = _Status.Where(w => w.IdStatus == 1).FirstOrDefault();
+
+                    var identMaxID = _Clients.Max(w => w.IdClient);
 
                     Client client = new Client();
                     {
-                        client.IdClient = _Clients.Count() + 1;
+                        client.IdClient = identMaxID + 1;
                         client.Name = ClienName;
                         client.Cpf = CPF;
                         client.Ddd = ClienDdd;
@@ -209,21 +205,16 @@ namespace WeChipCredit
 
                 }
             }
-            else
-                AtentionBox(msg, 1);
         }
 
         /*Editar Cliente*/
         private void Button_ClickEditRegister(object sender, RoutedEventArgs e)
         {
-            var msg = string.IsNullOrEmpty(CliName.Text) ? "NOME, " : "";
-            msg += string.IsNullOrEmpty(CliCpf.Text) ? "CPF, " : "";
-            msg += string.IsNullOrEmpty(CliDdd.Text) ? "DDD, " : "";
-            msg += string.IsNullOrEmpty(CliPhone.Text) ? "TELEFONE, " : "";
+            bool resFieldValidate = valField("cliCad", 1);
 
             if (string.IsNullOrEmpty(CliId.Text))
                 AtentionBox("Selecione um cliente para Editar!", 2);
-            else if (msg == "")
+            else if (!resFieldValidate)
             {
                 /*Padroniza o CPF e Retira tudo que não é Numérico do CPF e valida numeração restante se é CPF valido*/
                 var CPF = string.Join("", CliCpf.Text.ToCharArray().Where(Char.IsDigit));
@@ -234,7 +225,7 @@ namespace WeChipCredit
                     AtentionBox("Digite um CPF Válido com 11 Digitos Numericos", 2);
                 else if (DDD.Length != 2)
                     AtentionBox("DDD Inválido - Deve Conter 2 Digitos Numericos", 2);
-                else if (Fone.Length > 9 && Fone.Length < 8)
+                else if (Fone.Length > 9 || Fone.Length < 8)
                     AtentionBox("Telefone Inválido - Telefone deve conter entre 8 e 9 Digitos Numericos", 2);
                 else
                 {
@@ -257,8 +248,7 @@ namespace WeChipCredit
 
                 }
             }
-            else
-                AtentionBox(msg, 1);
+
         }
 
         /*Deletar Cliente*/
@@ -423,6 +413,14 @@ namespace WeChipCredit
                     msg = "DDD Inválido - Deve Conter 2 Digitos Numericos";
                 else if (Fone.Length > 9 || Fone.Length < 8)
                     msg = "Telefone Inválido - Telefone deve conter entre 8 e 9 Digitos Numericos";
+            }
+            else if (valTipe == "cliCad")
+            {
+                msg = string.IsNullOrEmpty(CliName.Text) ? "NOME, " : "";
+                msg += string.IsNullOrEmpty(CliCpf.Text) ? "CPF, " : "";
+                msg += string.IsNullOrEmpty(CliDdd.Text) ? "DDD, " : "";
+                msg += string.IsNullOrEmpty(CliPhone.Text) ? "TELEFONE, " : "";
+
             }
 
             if (msg != "")
@@ -668,7 +666,7 @@ namespace WeChipCredit
                     foreach (var s in resultSearch)
                     {
                         ComboBoxItem item = new ComboBoxItem();
-                        item.Content = $" CPF: {s.Cpf} | NOME: {s.Name}";
+                        item.Content = $" ID: {s.IdClient:0000} | CPF: {s.Cpf} | NOME: {s.Name}";
                         item.Tag = s.IdClient;
                         SearchClients.Items.Add(item);
                     }

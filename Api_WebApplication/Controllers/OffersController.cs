@@ -61,5 +61,33 @@ namespace Api_WebApplication.Controllers
 
         }
 
+        //GET: /api/Offers?cpf=402
+        public OfferResult Get(long cpf)
+        {
+            try
+            {
+
+                var ofertsResult = Oferts.Where(w => w._Client.Cpf.Contains(cpf.ToString())).ToList();
+
+                if (ofertsResult.Count > 0)
+                {
+                    Results.Mensage = "Ok";
+                    Results.Offers = ofertsResult;
+                }
+                else
+                {
+                    Results.Mensage = "Ofertas não localizadas";
+                }
+                return Results;
+
+            }
+            catch
+            {
+                Results.Mensage = "Ofertas não localizadas";
+                return Results;
+            }
+
+        }
+
     }
 }
