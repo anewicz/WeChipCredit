@@ -213,3 +213,4 @@ D:\PROVA PROCESSO SELETIVO\WeChipCredit\WeChipCredit\obj\Debug\WeChipCredit.appl
 D:\PROVA PROCESSO SELETIVO\WeChipCredit\WeChipCredit\obj\Debug\WeChipCredit.csproj.CopyComplete
 D:\PROVA PROCESSO SELETIVO\WeChipCredit\WeChipCredit\obj\Debug\WeChipCredit.exe
 D:\PROVA PROCESSO SELETIVO\WeChipCredit\WeChipCredit\obj\Debug\WeChipCredit.pdb
+D:\PROVA PROCESSO SELETIVO\WeChipCredit\WeChipCredit\obj\Debug\WeChipCredit.csprojAssemblyReference.cache
